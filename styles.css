@@ -1,0 +1,530 @@
+:root {
+    /* Primary and Secondary Colors */
+    --primary-color: #ffc86b; /* Main brand color */
+    --secondary-color: #f0bf6c; /* Complementary color used sparingly */
+    
+    /* Neutral Colors */
+    --background-color: #31333b; /* Main background color */
+    --surface-color: #34353a; /* Used for cards, sections */
+    --text-color: #f7f7f7; /* Primary text color */
+    --text-muted: #9a9a9a; /* Secondary text for less emphasis */
+
+    /* Accent Color */
+    --accent-color: #e29c41; /* Used for small callouts, alerts, etc. */
+    --overlay-color: rgba(0, 0, 0, 0.8);
+
+    /* Font sizes */
+    --font-size-small: .875rem;
+    --font-size-medium: 1rem;
+    --font-size-large: 1.25rem;
+    --font-size-xlarge: 2.0rem;
+    --font-size-xxlarge: 3.0rem;
+
+    /* Spacing */
+    --padding-small: .625rem;
+    --padding-medium: 1.25rem;
+    --padding-large: 1.875rem;
+
+    /* Border radius */
+    --border-radius-small: 2px;
+    --border-radius-medium: 5px;
+    --border-radius-large: 8px;
+
+    /* Box shadow */
+    --box-shadow-light: 0 0 5px rgba(0, 0, 0, 0.1);
+    --box-shadow-medium: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    padding-top: 45px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* //////////////////////////////////////////// */
+/* ///////////// NavBar Section //////////////// */
+/* //////////////////////////////////////////// */
+.main-menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--surface-color);
+    box-shadow: var(--box-shadow-light);
+    z-index: 10000;
+}
+
+.logo {
+    padding-left: var(--padding-medium);
+    width: 30%;
+    font-family: 'Work Sans', sans-serif;
+    font-size: var(--font-size-large);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.nav-menu {
+    width: 80%;
+    padding-right: 50px;
+}
+
+.nav-list {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-list-item {
+    padding: var(--padding-medium) var(--padding-large);
+    list-style: none;
+}
+
+.nav-link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: var(--font-size-medium);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 20px;
+    font-weight: 500;
+    transition: all .1s ease;
+}
+
+.nav-link.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+/* Shared container styling for all sections */
+.section {
+    padding: var(--padding-medium);
+    margin: 5px auto;
+    max-width: 1500px;
+}
+
+/* //////////////////////////////////////////// */
+/* ///////////// Intro Section //////////////// */
+/* //////////////////////////////////////////// */
+.intro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically if needed */
+    align-items: flex-start;
+    padding: var(--padding-large); /* Add padding to push content away from edges */
+    min-height: 50vh; /* Optional: make the intro section full viewport height */
+    
+    background-color: var(--surface-color);
+    box-shadow: var(--box-shadow-medium);
+}
+
+.intro .name, .intro h1, .intro h2, .intro a {
+    margin: .25rem;
+    margin-left: 10%; /* Adjust the margin value as needed */
+}
+
+.intro h1 {
+    font-size: var(--font-size-xxlarge);
+    color: var(--primary-color);
+}
+
+.intro h2 {
+
+}
+
+.intro a {
+    margin-top: 2rem;
+}
+
+.intro a:hover {
+    background-color: var(--secondary-color);
+}
+
+.button {
+    display: inline-block; /* Inline-block wraps around the text only */
+    padding: var(--padding-small) var(--padding-medium);
+    background-color: transparent; /* Transparent background */
+    color: var(--primary-color);
+    text-decoration: none; /* Remove underline */
+    border: 2px solid var(--primary-color); /* Outline around the button */
+    border-radius: var(--border-radius-medium); /* Rounded corners */
+    font-size: var(--font-size-medium);
+    transition: background-color 0.3s, color 0.3s, transform 0.2s ease;
+    margin-top: var(--padding-medium); /* Add spacing from the content above */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.button:hover {
+    background-color: var(--primary-color); /* Background color on hover */
+    color: var(--text-color); /* Text color change on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.grid {
+    position: absolute;
+    top: 20px;
+    right: 70px;
+    width: 150px;
+    height: 200px;
+    padding: var(--padding-large);
+}
+
+.grid::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, var(--primary-color) 20%, transparent 20%); /* Creates circles */
+    background-size: 70px 60px; /* Size of each circle */
+    opacity: 0.3; /* Optional: make the circles less prominent */
+}
+
+.social-media {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-media a {
+    margin: 0;
+    display: inline-flex; /* Use inline-flex to align items */
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color */
+    background: none; /* Ensure no background on the link */
+    border: none; /* Remove border */
+    outline: none; /* Remove focus outline */
+    padding: 0; /* Remove padding */
+}
+
+.social-media i {
+    font-size: var(--font-size-xlarge);
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.social-media i:hover {
+    color: var(--primary-color);
+}
+
+.social-media a:hover {
+    background: none;
+}
+
+/* //////////////////////////////////////////// */
+/* //////////// About Section ///////////////// */
+/* //////////////////////////////////////////// */
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 30vh;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    margin-right: 8rem;
+}
+
+.paragraphs {
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+.about h2 {
+    margin: 0;
+    padding: 0;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    font-size: var(--font-size-xlarge);
+}
+
+.about p {
+    font-size: var(--font-size-medium);
+    flex: 1;
+}
+
+.line-indent {
+    align-self: flex-start;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+    margin-left: 4rem;
+    margin-bottom: 1rem;
+    width: 80px;
+    height: 2px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+/* //////////////////////////////////////////// */
+/* ///////////// Skills Section /////////////// */
+/* //////////////////////////////////////////// */
+.skills {
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: var(--font-size-xlarge);
+    margin: 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.skill {
+    text-align: center;
+    padding: var(--padding-small);
+    background-color: #3d3e42;
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow-light);
+}
+
+.skill img {
+    width: auto; /* Adjust size as needed */
+    height: 120px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.skill h3 {
+    margin: 0;
+    font-size: var(--font-size-medium);
+}
+
+/* //////////////////////////////////////////// */
+/* /////////// Projects Section /////////////// */
+/* //////////////////////////////////////////// */
+.projects {
+    text-align: center;
+    padding: 2rem;
+}
+
+.projects h2 {
+    font-size: var(--font-size-xlarge);
+    margin: 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: var(--padding-medium);
+    padding: var(--padding-medium);
+}
+
+.project-card {
+    position: relative;
+    width: 100%;
+    height: 30vh; /* Adjust height as needed */
+    overflow: hidden;
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow-medium);
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease; /* Smooth zoom effect */
+}
+
+.project-card:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-color); /* Semi-transparent background */
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.2s ease;
+    padding: var(--padding-medium);
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+
+.project-card:hover .card-overlay {
+    opacity: 1; /* Fade in on hover */
+}
+
+.details-button {
+    margin-top: var(--padding-small);
+    padding: var(--padding-small) var(--padding-medium);
+    text-decoration: none;
+    transition: background-color 0.3s;
+    background-color: transparent; /* Transparent background */
+    color: var(--text-color);
+    border: 2px solid var(--primary-color); /* Outline around the button */
+    border-radius: var(--border-radius-medium); /* Rounded corners */
+}
+
+.details-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* //////////////////////////////////////////// */
+/* ////////// Experience Section ////////////// */
+/* //////////////////////////////////////////// */
+.experience {
+    margin-bottom: 4rem;
+}
+
+.experience h2 {
+    font-size: var(--font-size-xlarge);
+    margin: 0;
+    margin-left: 3rem;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: var(--padding-medium); /* Spacing between items */
+    padding: var(--padding-medium);
+}
+
+.exp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--padding-medium);
+    background-color: var(--tertiary-color);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow-light);
+}
+
+.exp img {
+    width: 200px; /* Set a fixed size for the images */
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: var(--padding-small);
+    border-radius: var(--border-radius-small); /* Optional: make the images circular */
+}
+
+.exp h3 {
+    margin: 10px 0 5px 0;
+    font-size: var(--font-size-large);
+}
+
+.exp p {
+    font-size: var(--font-size-small);
+}
+
+/* //////////////////////////////////////////// */
+/* //////////// Contact Section /////////////// */
+/* //////////////////////////////////////////// */
+.contact {
+    background-color: #3d3e42;
+    text-align: center;
+    position: relative;
+    padding-top: 2rem;
+    min-height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.contact h2 {
+    font-size: var(--font-size-xlarge);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Move up by 50% of its own height */
+    margin: 0;
+    padding: .5rem;
+}
+
+.contact-info {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center; /* Align items vertically within the container */
+    background-color: var(--background-color); /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    margin: 1rem .8rem; /* Add space between contact-info items */
+}
+
+.contact-info i {
+    margin: 1rem;
+}
+
+.contact-info p {
+    margin: 1rem;
+    margin-left: 0;
+    color: var(--primary-color);
+}
+
+.line {
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.top-right {
+    top: 0;
+    left: 0;
+}
+
+.top-left {
+    top: 0;
+    right: 0;
+}
+
+.bottom-right {
+    bottom: 0;
+    left: 0;
+}
+
+.bottom-left {
+    bottom: 0;
+    right: 0;
+}
+
+/* //////////////////////////////////////////// */
+/* //////////// Effects Section /////////////// */
+/* //////////////////////////////////////////// */
+.glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: var(--border-radius-large);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}

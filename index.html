@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Gavin Woodruff</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -14,6 +15,12 @@
             <div class="logo">
                 <h2>Logo</h2>
             </div>
+
+            <!-- Hamburger Icon (for mobile) -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
+            </div>
+
             <!-- Regular Navigation Menu -->
             <div class="nav-menu">
                 <ul class="nav-list">
@@ -25,10 +32,6 @@
                     <li class="nav-list-item"><a href="#experience" class="nav-link">Experience</a></li>
                     <li class="nav-list-item"><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
-            </div>
-            <!-- Hamburger Icon (for mobile) -->
-            <div class="hamburger" onclick="toggleMenu()">
-                <i class="fa fa-bars"></i>
             </div>
         </div>
     </header>
@@ -89,54 +92,93 @@
             </div>
         </div>
     </div>
-
+    
 
     <div id="skills" class="section skills">
         <h2>My Skills</h2>
-        <div class="skills-grid">
-            <div class="skill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-plain.svg" />
-                <h3>Unity</h3>
-            </div>
-            <div class="skill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
-                <h3>C#</h3>
-            </div>
-            <div class="skill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
-                <h3>GitHub</h3>
-            </div>
-            <div class="skill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
-                <h3>Python</h3>
-            </div>
-            <div class="skill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-                <h3>HTML & CSS</h3>
-            </div>
-            <div class="skill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
-                <h3>C++</h3>
-            </div>
-            <div class="skill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
-                <h3>React Native</h3>
-            </div>
-            <div class="skill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
-                <h3>MySQL</h3>
-            </div>
-            <div class="skill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg" />
-                <h3>Blender</h3>
-            </div>
-            <div class="skill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" />
-                <h3>Photoshop</h3>
-            </div>
+        <div class="skills-wrapper">
+            <button onclick="handleClick('previous')" class="button button--previous" type="button">➜</button>
+
+            <ul class="skills-list">
+                <li class="skills-item">
+                    <div class="skills-content">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-plain.svg" />
+                        <h3>Unity</h3>
+                    </div>
+                </li>
+                <li class="skills-item">
+                    <div class="skills-content">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
+                        <h3>C#</h3>
+                    </div>
+                </li>
+                <li class="skills-item">
+                    <div class="skills-content">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
+                        <h3>GitHub</h3>
+                    </div>
+                </li>
+                <li class="skills-item">
+                    <div class="skills-content">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                        <h3>Python</h3>
+                    </div>
+                </li>
+                <li class="skills-item">
+                    <div class="skills-content">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                        <h3>HTML & CSS</h3>
+                    </div>
+                </li>
+                <li class="skills-item">
+                    <div class="skills-content">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
+                        <h3>C++</h3>
+                    </div>
+                </li>
+                <li class="skills-item">
+                    <div class="skills-content">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+                        <h3>React Native</h3>
+                    </div>
+                </li>
+                <li class="skills-item">
+                    <div class="skills-content">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
+                        <h3>MySQL</h3>
+                    </div>
+                </li>
+                <li class="skills-item">
+                    <div class="skills-content">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg" />
+                        <h3>Blender</h3>
+                    </div>
+                </li>
+                <li class="skills-item">
+                    <div class="skills-content">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" />
+                        <h3>Photoshop</h3>
+                    </div>
+                </li>
+            </ul>
+            
+            <button onclick="handleClick('next')" class="button button--next" type="button">➜</button>
         </div>
     </div>
-    
+
+    <script>
+        const list = document.querySelector(".skills-list");
+        const item = document.querySelector(".skills-item");
+        const itemWidth = item.offsetWidth;
+      
+        function handleClick(direction) {
+            if(direction === "previous") {
+                list.scrollBy({ left: -itemWidth, behavior: "smooth" });
+            } else {
+                list.scrollBy({ left: itemWidth, behavior: "smooth" });
+            }
+        }
+    </script>
 
     <div id="projects" class="section projects">
         <h2>Projects</h2>
@@ -210,17 +252,19 @@
         <h2>Contact Me</h2>
         <div class="line top-left"></div>
         <div class="line top-right"></div>
-        <div class="contact-info">
-            <i class="fa-solid fa-envelope"></i>
-            <p>woodruffgavin13@gmail.com</p>
-        </div>
-        <div class="contact-info">
-            <i class="fa-solid fa-phone"></i>
-            <p>(309) 397-0087</p>
-        </div>
-        <div class="contact-info">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Minnesota, United States</p>
+        <div class="contact-content">
+            <div class="contact-info">
+                <i class="fa-solid fa-envelope"></i>
+                <p>woodruffgavin13@gmail.com</p>
+            </div>
+            <div class="contact-info">
+                <i class="fa-solid fa-phone"></i>
+                <p>(309) 397-0087</p>
+            </div>
+            <div class="contact-info">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Minnesota, United States</p>
+            </div>
         </div>
         <div class="line bottom-left"></div>
         <div class="line bottom-right"></div>

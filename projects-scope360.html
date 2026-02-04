@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scope 360 IFC Asset Detection – Gavin Woodruff</title>
+
+    <!-- Shared styles (from your site) -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- NAVIGATION -->
+    <header class="main-head">
+      <div class="main-menu">
+        <div class="logo">
+          <h2>GW</h2>
+        </div>
+
+        <!-- Hamburger Icon (for mobile) -->
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </div>
+
+        <div class="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-list-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#screenshots" class="nav-link">Screenshots</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#overview" class="nav-link">Overview</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#links" class="nav-link">Links</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      function toggleMenu() {
+        const navMenu = document.querySelector(".nav-menu");
+        navMenu.classList.toggle("active");
+      }
+    </script>
+
+    <!-- PAGE CONTENT -->
+    <div class="section project-details">
+      <!-- Title -->
+      <h1 class="project-title">Scope 360 IFC Asset Detection</h1>
+      <h2 class="project-subtitle">
+        A machine learning pipeline and UI system for automatically detecting
+        and labeling assets in IFC construction files, developed for Immersion
+        Data Solutions.
+      </h2>
+
+      <!-- Screenshots -->
+      <div id="screenshots" class="project-section">
+        <h2>Screenshots</h2>
+
+        <!-- CAROUSEL WRAPPER -->
+        <div class="carousel">
+          <button class="carousel-btn prev-btn">&#10094;</button>
+
+          <div class="carousel-track">
+            <img
+              src="assets/images/IFCAssetDetection.png"
+              class="carousel-image"
+              alt="Screenshot 1"
+            />
+          </div>
+
+          <button class="carousel-btn next-btn">&#10095;</button>
+        </div>
+      </div>
+
+      <!-- Meta Info -->
+      <div id="overview" class="project-meta">
+        <div>
+          <h3>Your Role</h3>
+          <p>
+            Developed major components of the UI and machine learning pipeline.
+            Set up the project architecture using Docker, React, Node.js, and a
+            PostGIS-enabled database. Worked closely with teammates to integrate
+            YOLO-based object detection into the workflow.
+          </p>
+        </div>
+
+        <div>
+          <h3>Tools & Technologies</h3>
+          <ul>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Docker</li>
+            <li>YOLO Machine Learning Model</li>
+            <li>Python</li>
+            <li>PostgreSQL + PostGIS</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Type of Project</h3>
+          <p>Industry-sponsored senior project (team-based)</p>
+        </div>
+      </div>
+
+      <!-- Overview -->
+      <div class="project-section">
+        <h2>Overview</h2>
+        <p>
+          This project aimed to automate the identification of construction
+          assets inside IFC models by applying machine learning to classify and
+          label objects. Our team was tasked with building a full pipeline:
+          frontend interface, backend processing logic, a database for storing
+          labeled assets, and a YOLO-based detection model wrapped in a
+          Dockerized environment to ensure portability across systems.
+        </p>
+      </div>
+
+      <!-- Challenges -->
+      <div class="project-section">
+        <h2>Challenges & Problems Solved</h2>
+        <ul>
+          <li>
+            Designed the entire project architecture using tools that were
+            unfamiliar at the start, including Docker, PostGIS, and
+            YOLO—requiring rapid self-learning and technical adaptation.
+          </li>
+          <li>
+            Implemented the frontend UI in React to upload, view, and manage
+            parsed IFC data, enabling engineers to easily interact with model
+            information.
+          </li>
+          <li>
+            Integrated a YOLO machine learning workflow using Python, including
+            model loading, inference execution, and data formatting for the
+            backend.
+          </li>
+          <li>
+            Created a Docker-based environment to unify the frontend, backend,
+            ML pipeline, and database into a consistent deployment system.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Links -->
+      <div id="links" class="project-section">
+        <!-- <h2>Links</h2> -->
+        <a
+          href="https://github.com/IronThorn17"
+          target="blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- CAROUSEL LOGIC -->
+    <script>
+      const track = document.querySelector(".carousel-track");
+      const images = Array.from(document.querySelectorAll(".carousel-image"));
+      const prevBtn = document.querySelector(".prev-btn");
+      const nextBtn = document.querySelector(".next-btn");
+
+      let index = 0;
+
+      function updateCarousel() {
+        track.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      nextBtn.addEventListener("click", () => {
+        index = (index + 1) % images.length;
+        updateCarousel();
+      });
+
+      prevBtn.addEventListener("click", () => {
+        index = (index - 1 + images.length) % images.length;
+        updateCarousel();
+      });
+    </script>
+  </body>
+</html>

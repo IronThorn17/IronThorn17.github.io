@@ -1,299 +1,438 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gavin Woodruff - Software Engineer Portfolio</title>
-    <meta name="description" content="Portfolio of Gavin Woodruff - Software Engineer passionate about Unity, C#, and game development. Explore skills, projects, and contact information.">
-    <meta name="keywords" content="Gavin Woodruff, Software Engineer, Unity Developer, Game Development, C#, Python, Software Engineering Portfolio, St Cloud State University">
-    <meta property="og:title" content="Gavin Woodruff - Software Engineer Portfolio">
-    <meta property="og:description" content="Explore my projects, skills, and contact details. Passionate about Unity and game development.">
-    <meta property="og:image" content="assets/images/PreviewImage.png">
-    <meta property="og:url" content="https://ironthorn17.github.io/">
-    <meta property="og:type" content="website">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta
+      name="description"
+      content="Portfolio of Gavin Woodruff - Software Engineer passionate about Unity, C#, and game development. Explore skills, projects, and contact information."
+    />
+    <meta
+      name="keywords"
+      content="Gavin Woodruff, Software Engineer, Unity Developer, Game Development, C#, Python, Software Engineering Portfolio, St Cloud State University"
+    />
+    <meta
+      property="og:title"
+      content="Gavin Woodruff - Software Engineer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Explore my projects, skills, and contact details. Passionate about Unity and game development."
+    />
+    <meta property="og:image" content="assets/images/PreviewImage.png" />
+    <meta property="og:url" content="https://ironthorn17.github.io/" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "Person",
-            "name": "Gavin Woodruff",
-            "jobTitle": "Software Engineer",
-            "email": "woodruffgavin13@gmail.com",
-            "address": {
-                "@type": "PostalAddress",
-                "addressRegion": "Minnesota",
-                "addressCountry": "United States"
-            },
-            "alumniOf": ["St Cloud State University", "Anoka Ramsey Community College"],
-            "sameAs": [
-                "https://www.instagram.com/gavinwoodruff18/",
-                "https://github.com/IronThorn17",
-                "https://www.linkedin.com/in/gavinwoodruff18/"
-            ]
-        }
-        </script>
-</head>
-<body>
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Gavin Woodruff",
+        "jobTitle": "Software Engineer",
+        "email": "woodruffgavin13@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "Minnesota",
+          "addressCountry": "United States"
+        },
+        "alumniOf": [
+          "St Cloud State University",
+          "Anoka Ramsey Community College"
+        ],
+        "sameAs": [
+          "https://www.instagram.com/gavinwoodruff18/",
+          "https://github.com/IronThorn17",
+          "https://www.linkedin.com/in/gavinwoodruff18/"
+        ]
+      }
+    </script>
+  </head>
+  <body>
     <header class="main-head">
-        <div class="main-menu">
-            <div class="logo">
-                <h2>Logo</h2>
-            </div>
-
-            <!-- Hamburger Icon (for mobile) -->
-            <div class="hamburger" onclick="toggleMenu()">
-                <i class="fa fa-bars"></i>
-            </div>
-
-            <!-- Regular Navigation Menu -->
-            <div class="nav-menu">
-                <ul class="nav-list">
-                    <!-- Nav items go here as before -->
-                    <li class="nav-list-item"><a href="#intro" class="nav-link">Introduction</a></li>
-                    <li class="nav-list-item"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-list-item"><a href="#skills" class="nav-link">Skills</a></li>
-                    <li class="nav-list-item"><a href="#projects" class="nav-link">Projects</a></li>
-                    <li class="nav-list-item"><a href="#experience" class="nav-link">Experience</a></li>
-                    <li class="nav-list-item"><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </div>
+      <div class="main-menu">
+        <div class="logo">
+          <h2>GW</h2>
         </div>
+
+        <!-- Hamburger Icon (for mobile) -->
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-list-item">
+              <a href="#intro" class="nav-link">Introduction</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#skills" class="nav-link">Skills</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#projects" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#experience" class="nav-link">Experience</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
-    
+
     <!-- JavaScript function to toggle menu -->
     <script>
-        function toggleMenu() {
-            const navMenu = document.querySelector('.nav-menu');
-            navMenu.classList.toggle('active');
-        }
-    
-        // Close menu when a nav link is clicked
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                const navMenu = document.querySelector('.nav-menu');
-                if (navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
-                }
-            });
-        });
-    </script>
-    
-    <div id="intro" class="section intro">
-        <h1>Gavin Woodruff</h1>
-        <h2>Software Engineering Intern</h2>
-        <a href="#contact" class="button">Contact Me</a>
-        <div class="grid"></div>
-        <div class="social-media">
-            <a href="https://www.instagram.com/gavinwoodruff18/" target="blank" rel="noopener noreferrer">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://github.com/IronThorn17" target="blank" rel="noopener noreferrer">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/gavinwoodruff18/" target="blank" rel="noopener noreferrer">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
-    </div>
+      function toggleMenu() {
+        const navMenu = document.querySelector(".nav-menu");
+        navMenu.classList.toggle("active");
+      }
 
+      // Close menu when a nav link is clicked
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          const navMenu = document.querySelector(".nav-menu");
+          if (navMenu.classList.contains("active")) {
+            navMenu.classList.remove("active");
+          }
+        });
+      });
+    </script>
+
+    <div id="intro" class="section intro">
+      <h1>Gavin Woodruff</h1>
+      <h2>Software Engineering Intern</h2>
+      <a href="#contact" class="button">Contact Me</a>
+      <div class="grid"></div>
+      <div class="social-media">
+        <a
+          href="https://www.instagram.com/gavinwoodruff18/"
+          target="blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://github.com/IronThorn17"
+          target="blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/gavinwoodruff18/"
+          target="blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
 
     <div id="about" class="section about">
-        <h2>About</h2>
-        <div class="about-content">
-            <div class="line-indent"></div>
-            <div class="paragraphs">
-                <p>
-                    I'm currently pursuing a Bachelor's degree in Software Engineering at St. Cloud State University, with an expected graduation in Spring 2026. 
-                    My journey into software development began with curiosity. I started college without a specific goal or major, wanting to explore different paths. Eventually, I decided to dive into programming and game development, an old childhood desire.
-                </p>
-                <p>
-                    Teaching myself the basics of Unity and game development was a turning point. I quickly realized that creating interactive experiences was not just fascinating, but something I could see myself doing long-term. 
-                    This passion led me to choose Software Engineering as my major, focusing on building engaging and dynamic software solutions.
-                </p>
-                <p>
-                    Outside of academics, I spend my free time developing video games in Unity, constantly exploring new ways to push the boundaries of what I can create. When I'm not coding, you'll find me playing guitar or spending quality time with friends and family.
-                </p>
-            </div>
+      <h2>About</h2>
+      <div class="about-content">
+        <div class="line-indent"></div>
+        <div class="paragraphs">
+          <p>
+            I'm currently pursuing a Bachelor's degree in Software Engineering
+            at St. Cloud State University, with an expected graduation in Spring
+            2026. My journey into software development began with curiosity. I
+            started college without a specific goal or major, wanting to explore
+            different paths. Eventually, I decided to dive into programming and
+            game development, an old childhood desire.
+          </p>
+          <p>
+            Teaching myself the basics of Unity and game development was a
+            turning point. I quickly realized that creating interactive
+            experiences was not just fascinating, but something I could see
+            myself doing long-term. This passion led me to choose Software
+            Engineering as my major, focusing on building engaging and dynamic
+            software solutions.
+          </p>
+          <p>
+            Outside of academics, I spend my free time developing video games in
+            Unity, constantly exploring new ways to push the boundaries of what
+            I can create. When I'm not coding, you'll find me playing guitar or
+            spending quality time with friends and family.
+          </p>
         </div>
+      </div>
     </div>
-    
 
     <div id="skills" class="section skills">
-        <h2>My Skills</h2>
-        <div class="skills-wrapper">
-            <button onclick="handleClick('previous')" class="button button--previous" type="button">➜</button>
+      <h2>My Skills</h2>
+      <div class="skills-wrapper">
+        <button
+          onclick="handleClick('previous')"
+          class="button button--previous"
+          type="button"
+        >
+          ➜
+        </button>
 
-            <ul class="skills-list">
-                <li class="skills-item">
-                    <div class="skills-content">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-plain.svg" />
-                        <h3>Unity</h3>
-                    </div>
-                </li>
-                <li class="skills-item">
-                    <div class="skills-content">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
-                        <h3>C#</h3>
-                    </div>
-                </li>
-                <li class="skills-item">
-                    <div class="skills-content">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
-                        <h3>GitHub</h3>
-                    </div>
-                </li>
-                <li class="skills-item">
-                    <div class="skills-content">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
-                        <h3>Python</h3>
-                    </div>
-                </li>
-                <li class="skills-item">
-                    <div class="skills-content">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-                        <h3>HTML & CSS</h3>
-                    </div>
-                </li>
-                <li class="skills-item">
-                    <div class="skills-content">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
-                        <h3>C++</h3>
-                    </div>
-                </li>
-                <li class="skills-item">
-                    <div class="skills-content">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
-                        <h3>React Native</h3>
-                    </div>
-                </li>
-                <li class="skills-item">
-                    <div class="skills-content">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
-                        <h3>MySQL</h3>
-                    </div>
-                </li>
-                <li class="skills-item">
-                    <div class="skills-content">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg" />
-                        <h3>Blender</h3>
-                    </div>
-                </li>
-                <li class="skills-item">
-                    <div class="skills-content">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" />
-                        <h3>Photoshop</h3>
-                    </div>
-                </li>
-            </ul>
-            
-            <button onclick="handleClick('next')" class="button button--next" type="button">➜</button>
-        </div>
+        <ul class="skills-list">
+          <li class="skills-item">
+            <div class="skills-content">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-plain.svg"
+              />
+              <h3>Unity</h3>
+            </div>
+          </li>
+          <li class="skills-item">
+            <div class="skills-content">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+              />
+              <h3>C#</h3>
+            </div>
+          </li>
+          <li class="skills-item">
+            <div class="skills-content">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+              />
+              <h3>GitHub</h3>
+            </div>
+          </li>
+          <li class="skills-item">
+            <div class="skills-content">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+              />
+              <h3>Python</h3>
+            </div>
+          </li>
+          <li class="skills-item">
+            <div class="skills-content">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+              />
+              <h3>HTML & CSS</h3>
+            </div>
+          </li>
+          <li class="skills-item">
+            <div class="skills-content">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+              />
+              <h3>C++</h3>
+            </div>
+          </li>
+          <li class="skills-item">
+            <div class="skills-content">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+              />
+              <h3>React Native</h3>
+            </div>
+          </li>
+          <li class="skills-item">
+            <div class="skills-content">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+              />
+              <h3>MySQL</h3>
+            </div>
+          </li>
+          <li class="skills-item">
+            <div class="skills-content">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg"
+              />
+              <h3>Blender</h3>
+            </div>
+          </li>
+          <li class="skills-item">
+            <div class="skills-content">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg"
+              />
+              <h3>Photoshop</h3>
+            </div>
+          </li>
+        </ul>
+
+        <button
+          onclick="handleClick('next')"
+          class="button button--next"
+          type="button"
+        >
+          ➜
+        </button>
+      </div>
     </div>
 
     <script>
-        const list = document.querySelector(".skills-list");
-        const item = document.querySelector(".skills-item");
-        const itemWidth = item.offsetWidth;
-      
-        function handleClick(direction) {
-            if(direction === "previous") {
-                list.scrollBy({ left: -itemWidth, behavior: "smooth" });
-            } else {
-                list.scrollBy({ left: itemWidth, behavior: "smooth" });
-            }
+      const list = document.querySelector(".skills-list");
+      const item = document.querySelector(".skills-item");
+      const itemWidth = item.offsetWidth;
+
+      function handleClick(direction) {
+        if (direction === "previous") {
+          list.scrollBy({ left: -itemWidth, behavior: "smooth" });
+        } else {
+          list.scrollBy({ left: itemWidth, behavior: "smooth" });
         }
+      }
     </script>
 
     <div id="projects" class="section projects">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            <!-- Project Card -->
-            <div class="project-card">
-                <img src="assets/images/IBGHomeScreen.jpg" alt="Screenshot of EPSCO AFS Project">
-                <div class="card-overlay">
-                    <h3>EPSCO AFS</h3>
-                    <p>Icebreaker Games was contracted to develop a software tool for Electrical Engineers conducting Arc Flash studies. This tool allows engineers to input and analyze data to quickly assess factory safety standards and ensure compliance with safety regulations.</p>
-                    <!-- <a href="project-details1.html" class="details-button">Learn More</a> -->
-                </div>
-            </div>
-            <!-- Project Card -->
-            <div class="project-card">
-                <img src="assets/images/BlueEggBakeryWebsiteMockup.jpg" alt="Website Mockup Image">
-                <div class="card-overlay">
-                    <h3>Blue Egg Bakery Website</h3>
-                    <p>Created a website mockup for a local bakery to enhance their online presence beyond Facebook. The design includes features for marketing and an online order placement system to streamline customer interactions.</p>
-                    <!-- <a href="project-details1.html" class="details-button">Learn More</a> -->
-                </div>
-            </div>
-            <!-- Project Card -->
-            <div class="project-card">
-                <img src="assets/images/Pong.png" alt="Pong Multithreading Game Image">
-                <div class="card-overlay">
-                    <h3>Pong Threading</h3>
-                    <p>Implemented Multithreading into the classic Pong game using C++ and OpenGL</p>
-                    <!-- <a href="project-details1.html" class="details-button">Learn More</a> -->
-                </div>
-            </div>
-            <!-- Project Card -->
-            <div class="project-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ctqoSkcWJbrSeL5tHvvab7iG4DS_sHdo3w&s" alt="Bank Management Database System Mockup">
-                <div class="card-overlay">
-                    <h3>Bank Management Database System Mockup</h3>
-                    <p>Using a SQL backend and a Visual Basic Forms frontend, my class group created a mockup for a Bank Management Database System which would manage employees, managers, payroll, and timecards.</p>
-                    <!-- <a href="project-details1.html" class="details-button">Learn More</a> -->
-                </div>
-            </div>
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <!-- Project Card -->
+        <div class="project-card">
+          <img
+            src="assets/images/IFCAssetDetection.png"
+            alt="Screenshot of Scope 360 IFC Asset Detection Project"
+          />
+          <div class="card-overlay">
+            <h3>Scope 360 IFC Asset Detection</h3>
+            <p>
+              A senior project developped for Immersion Data Solutions to make
+              use of machine learning to automatically detect and label assets
+              in IFC files for use in the construction industry. This project
+              makes uses of Docker to ensure portabilitiy across different
+              systems.
+            </p>
+            <a href="projects-scope360.html" class="details-button"
+              >Learn More</a
+            >
+          </div>
         </div>
+        <!-- Project Card -->
+        <div class="project-card">
+          <img
+            src="assets/images/IBGHomeScreen.jpg"
+            alt="Screenshot of EPSCO AFS Project"
+          />
+          <div class="card-overlay">
+            <h3>EPSCO AFS</h3>
+            <p>
+              Icebreaker Games was contracted to develop a software tool for
+              Electrical Engineers conducting Arc Flash studies. This tool
+              allows engineers to input and analyze data to quickly assess
+              factory safety standards and ensure compliance with safety
+              regulations.
+            </p>
+            <!-- <a href="project-details1.html" class="details-button">Learn More</a> -->
+          </div>
+        </div>
+        <!-- Project Card -->
+        <div class="project-card">
+          <img
+            src="assets/images/BlueEggBakeryWebsiteMockup.jpg"
+            alt="Website Mockup Image"
+          />
+          <div class="card-overlay">
+            <h3>Blue Egg Bakery Website</h3>
+            <p>
+              Created a website mockup for a local bakery to enhance their
+              online presence beyond Facebook. The design includes features for
+              marketing and an online order placement system to streamline
+              customer interactions.
+            </p>
+            <!-- <a href="project-details1.html" class="details-button">Learn More</a> -->
+          </div>
+        </div>
+        <!-- Project Card -->
+        <div class="project-card">
+          <img
+            src="assets/images/Pong.png"
+            alt="Pong Multithreading Game Image"
+          />
+          <div class="card-overlay">
+            <h3>Pong Threading</h3>
+            <p>
+              Implemented Multithreading into the classic Pong game using C++
+              and OpenGL
+            </p>
+            <!-- <a href="project-details1.html" class="details-button">Learn More</a> -->
+          </div>
+        </div>
+        <!-- Project Card -->
+        <div class="project-card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ctqoSkcWJbrSeL5tHvvab7iG4DS_sHdo3w&s"
+            alt="Bank Management Database System Mockup"
+          />
+          <div class="card-overlay">
+            <h3>Bank Management Database System Mockup</h3>
+            <p>
+              Using a SQL backend and a Visual Basic Forms frontend, my class
+              group created a mockup for a Bank Management Database System which
+              would manage employees, managers, payroll, and timecards.
+            </p>
+            <!-- <a href="project-details1.html" class="details-button">Learn More</a> -->
+          </div>
+        </div>
+      </div>
     </div>
-
 
     <div id="experience" class="section experience">
-        <h2>Experience</h2>
-        <div class="experience-grid">
-            <div class="exp glass">
-                <img src="assets/images/IBG_Logo2.png" alt="Icebreaker Games Logo">
-                <h3>Icebreaker Games</h3>
-                <h4>St Cloud, Minnesota</h4>
-                <p>2024</p>
-            </div>
-            <div class="exp glass">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ctqoSkcWJbrSeL5tHvvab7iG4DS_sHdo3w&s" alt="St Cloud State University">
-                <h3>St Cloud State University</h3>
-                <h4>St Cloud, Minnesota</h4>
-                <p>2020</p>
-            </div>
-            <div class="exp glass">
-                <img src="https://www.smsu.edu/resources/webspaces/academics/onlinelearning/partnerships/arcc-logo.jpg" alt="Anoka Ramsey Community College">
-                <h3>Anoka Ramsey Community College</h3>
-                <h4>Coon Rapids, Minnesota</h4>
-                <p>2018</p>
-            </div>
+      <h2>Experience</h2>
+      <div class="experience-grid">
+        <div class="exp glass">
+          <img src="assets/images/IBG_Logo2.png" alt="Icebreaker Games Logo" />
+          <h3>Icebreaker Games</h3>
+          <h4>St Cloud, Minnesota</h4>
+          <p>2024</p>
         </div>
+        <div class="exp glass">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ctqoSkcWJbrSeL5tHvvab7iG4DS_sHdo3w&s"
+            alt="St Cloud State University"
+          />
+          <h3>St Cloud State University</h3>
+          <h4>St Cloud, Minnesota</h4>
+          <p>2020</p>
+        </div>
+        <div class="exp glass">
+          <img
+            src="https://www.smsu.edu/resources/webspaces/academics/onlinelearning/partnerships/arcc-logo.jpg"
+            alt="Anoka Ramsey Community College"
+          />
+          <h3>Anoka Ramsey Community College</h3>
+          <h4>Coon Rapids, Minnesota</h4>
+          <p>2018</p>
+        </div>
+      </div>
     </div>
-
 
     <div id="contact" class="section contact">
-        <h2>Contact Me</h2>
-        <div class="line top-left"></div>
-        <div class="line top-right"></div>
-        <div class="contact-content">
-            <div class="contact-info">
-                <i class="fa-solid fa-envelope"></i>
-                <p>woodruffgavin13@gmail.com</p>
-            </div>
-            <div class="contact-info">
-                <i class="fa-solid fa-phone"></i>
-                <p>(309) 397-0087</p>
-            </div>
-            <div class="contact-info">
-                <i class="fa-solid fa-location-dot"></i>
-                <p>Minnesota, United States</p>
-            </div>
+      <h2>Contact Me</h2>
+      <div class="line top-left"></div>
+      <div class="line top-right"></div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <i class="fa-solid fa-envelope"></i>
+          <p>woodruffgavin13@gmail.com</p>
         </div>
-        <div class="line bottom-left"></div>
-        <div class="line bottom-right"></div>
+        <div class="contact-info">
+          <i class="fa-solid fa-phone"></i>
+          <p>(309) 397-0087</p>
+        </div>
+        <div class="contact-info">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Minnesota, United States</p>
+        </div>
+      </div>
+      <div class="line bottom-left"></div>
+      <div class="line bottom-right"></div>
     </div>
-</body>
+  </body>
 </html>

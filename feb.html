@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Question For You</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+          135deg,
+          #1a1a2e 0%,
+          #16213e 50%,
+          #0f3460 100%
+        );
+        font-family: "Georgia", serif;
+        overflow: hidden;
+      }
+
+      .container {
+        text-align: center;
+        padding: 2rem;
+        position: relative;
+        z-index: 10;
+      }
+
+      h1 {
+        color: #ff6b6b;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .buttons {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        min-height: 80px;
+      }
+
+      /* Hide the actual radio buttons */
+      input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .btn {
+        padding: 1rem 3rem;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        font-family: inherit;
+      }
+
+      .btn-yes {
+        background: linear-gradient(45deg, #ff6b6b, #ee5a5a);
+        color: white;
+        box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+      }
+
+      .btn-yes:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+      }
+
+      .btn-no {
+        background: linear-gradient(45deg, #576574, #4a4a5a);
+        color: white;
+        box-shadow: 0 4px 15px rgba(87, 101, 116, 0.4);
+        position: relative;
+      }
+
+      /* The magic - No button runs away on hover */
+      .btn-no:hover {
+        animation: runAway 0.3s ease forwards;
+      }
+
+      @keyframes runAway {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(150px, -100px) rotate(20deg);
+        }
+      }
+
+      .btn-no:hover:nth-child(2) {
+        animation: runAway2 0.3s ease forwards;
+      }
+
+      /* Alternative escape routes */
+      .buttons:hover .btn-no {
+        animation: escape 0.2s ease infinite alternate;
+      }
+
+      @keyframes escape {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(
+            calc(-50px + 100px * var(--random, 0.5)),
+            calc(-50px + 100px * var(--random2, 0.5))
+          );
+        }
+      }
+
+      /* Celebration section - hidden by default */
+      .celebration {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        animation: fadeIn 0.5s ease;
+      }
+
+      /* Disappointed section - hidden by default */
+      .disappointed {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        animation: fadeIn 0.5s ease;
+      }
+
+      .disappointed h2 {
+        color: #f8b4b4;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .disappointed p {
+        color: #a0a0a0;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+
+      /* Show celebration when Yes is checked */
+      #yes:checked ~ .container .question-section {
+        display: none;
+      }
+
+      #yes:checked ~ .container .celebration {
+        display: flex;
+      }
+
+      #yes:checked ~ .hearts-container {
+        display: block;
+      }
+
+      /* Hide disappointed when super yes is checked */
+      #yes:checked ~ .container .disappointed {
+        display: none;
+      }
+
+      /* Show disappointed when just Yes is checked */
+      #just-yes:checked ~ .container .question-section {
+        display: none;
+      }
+
+      #just-yes:checked ~ .container .disappointed {
+        display: flex;
+      }
+
+      .celebration h2 {
+        color: #ff6b6b;
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        animation: pulse 0.5s ease infinite alternate;
+      }
+
+      .celebration p {
+        color: #f8b4b4;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .big-heart {
+        font-size: 8rem;
+        animation: heartBeat 1s ease infinite;
+        color: #ff6b6b;
+      }
+      .sad-face {
+        font-size: 5rem;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes pulse {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.05);
+        }
+      }
+
+      @keyframes heartBeat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        25% {
+          transform: scale(1.1);
+        }
+        50% {
+          transform: scale(1);
+        }
+        75% {
+          transform: scale(1.2);
+        }
+      }
+
+      /* Floating hearts background - shown on celebration */
+      .hearts-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .floating-heart {
+        position: absolute;
+        bottom: -50px;
+        font-size: 2rem;
+        color: #ff6b6b;
+        animation: floatUp 4s ease-in infinite;
+        opacity: 0.8;
+      }
+
+      .floating-heart:nth-child(1) {
+        left: 5%;
+        animation-delay: 0s;
+        animation-duration: 4s;
+      }
+      .floating-heart:nth-child(2) {
+        left: 15%;
+        animation-delay: 0.5s;
+        animation-duration: 5s;
+      }
+      .floating-heart:nth-child(3) {
+        left: 25%;
+        animation-delay: 1s;
+        animation-duration: 4.5s;
+      }
+      .floating-heart:nth-child(4) {
+        left: 35%;
+        animation-delay: 1.5s;
+        animation-duration: 5.5s;
+      }
+      .floating-heart:nth-child(5) {
+        left: 45%;
+        animation-delay: 0.2s;
+        animation-duration: 4s;
+      }
+      .floating-heart:nth-child(6) {
+        left: 55%;
+        animation-delay: 0.8s;
+        animation-duration: 5s;
+      }
+      .floating-heart:nth-child(7) {
+        left: 65%;
+        animation-delay: 1.2s;
+        animation-duration: 4.2s;
+      }
+      .floating-heart:nth-child(8) {
+        left: 75%;
+        animation-delay: 0.3s;
+        animation-duration: 5.2s;
+      }
+      .floating-heart:nth-child(9) {
+        left: 85%;
+        animation-delay: 1.8s;
+        animation-duration: 4.8s;
+      }
+      .floating-heart:nth-child(10) {
+        left: 95%;
+        animation-delay: 0.6s;
+        animation-duration: 5.5s;
+      }
+
+      @keyframes floatUp {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 0.8;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-100vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+      /* Sparkle effect */
+      .sparkle {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        border-radius: 50%;
+        animation: sparkle 1.5s ease-in-out infinite;
+      }
+
+      @keyframes sparkle {
+        0%,
+        100% {
+          opacity: 0;
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      /* Mobile adjustments */
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2rem;
+        }
+
+        .btn {
+          padding: 0.8rem 2rem;
+          font-size: 1.2rem;
+        }
+
+        .buttons {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .celebration h2 {
+          font-size: 2.5rem;
+        }
+
+        .big-heart {
+          font-size: 5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hidden radio buttons at the top level for CSS sibling selection -->
+    <input type="radio" name="answer" id="yes" />
+    <input type="radio" name="answer" id="just-yes" />
+
+    <!-- Floating hearts for celebration -->
+    <div class="hearts-container">
+      <div class="floating-heart">&#10084;</div>
+      <div class="floating-heart">&#10084;</div>
+      <div class="floating-heart">&#10084;</div>
+      <div class="floating-heart">&#10084;</div>
+      <div class="floating-heart">&#10084;</div>
+      <div class="floating-heart">&#10084;</div>
+      <div class="floating-heart">&#10084;</div>
+      <div class="floating-heart">&#10084;</div>
+      <div class="floating-heart">&#10084;</div>
+      <div class="floating-heart">&#10084;</div>
+    </div>
+
+    <div class="container">
+      <!-- Question section -->
+      <div class="question-section">
+        <h1>Alexis, Will you be my Valentine?</h1>
+        <div class="buttons">
+          <label for="yes" class="btn btn-yes">Absolutely Yes</label>
+          <label for="just-yes" class="btn btn-no">Yes</label>
+        </div>
+      </div>
+
+      <!-- Celebration section (shown when Super Yes is clicked) -->
+      <div class="celebration">
+        <h2>Yay!</h2>
+        <div class="big-heart">&#10084;</div>
+        <p>I knew you would say yes!</p>
+      </div>
+
+      <!-- Disappointed section (shown when just Yes is clicked) -->
+      <div class="disappointed">
+        <h2>Why didn't you press Absolutely Yes?...</h2>
+        <div class="sad-face">&#128546;</div>
+        <p>Try again!</p>
+        <label for="yes" class="btn btn-yes">Absolutely Yes</label>
+      </div>
+    </div>
+  </body>
+</html>

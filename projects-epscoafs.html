@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EPSCO Arc Flash Study Tool – Gavin Woodruff</title>
+
+    <!-- Shared styles (from your site) -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- NAVIGATION -->
+    <header class="main-head">
+      <div class="main-menu">
+        <div class="logo">
+          <a href="index.html"><h2>GW</h2></a>
+        </div>
+
+        <!-- Hamburger Icon (for mobile) -->
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </div>
+
+        <div class="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-list-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#screenshot" class="nav-link">Screenshot</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#overview" class="nav-link">Overview</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#links" class="nav-link">Links</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      function toggleMenu() {
+        const navMenu = document.querySelector(".nav-menu");
+        navMenu.classList.toggle("active");
+      }
+    </script>
+
+    <!-- PAGE CONTENT -->
+    <div class="section project-details">
+      <!-- HERO: Title + Badge + Subtitle + Tech Stack -->
+      <div class="project-header">
+        <span class="project-type-badge">Internship Project</span>
+        <h1 class="project-title">EPSCO Arc Flash Study Tool</h1>
+        <h2 class="project-subtitle">
+          A mobile application built for electrical engineers to conduct Arc
+          Flash studies, input system data, and quickly assess factory safety
+          compliance — developed at Icebreaker Games for EPSCO Inc.
+        </h2>
+        <div class="tech-stack">
+          <span class="tech-tag">Unity</span>
+          <span class="tech-tag">C#</span>
+        </div>
+      </div>
+
+      <!-- Role + Project Type Cards -->
+      <div class="project-info-grid">
+        <div class="project-info-card">
+          <h3>My Role</h3>
+          <p>
+            Contributed to the development of the application as a Software
+            Engineering Intern at Icebreaker Games. Worked on UI components and
+            core application logic within a Unity and C# codebase.
+          </p>
+        </div>
+        <div class="project-info-card">
+          <h3>Project Type</h3>
+          <p>
+            Client-contracted mobile application developed at Icebreaker Games
+            for EPSCO Inc., a provider of electrical engineering services.
+          </p>
+        </div>
+      </div>
+
+      <!-- Screenshot -->
+      <div id="screenshot" class="project-section">
+        <h2>Screenshot</h2>
+        <div class="project-screenshot-frame">
+          <img
+            src="assets/images/IBGHomeScreen.jpg"
+            alt="EPSCO Arc Flash Study Tool Home Screen"
+            class="project-screenshot-img"
+          />
+        </div>
+      </div>
+
+      <!-- Overview -->
+      <div id="overview" class="project-section">
+        <h2>Overview</h2>
+        <p>
+          Arc Flash studies are a required part of electrical safety compliance
+          in industrial environments. Engineers must analyze electrical system
+          parameters to determine incident energy levels, establish arc flash
+          protection boundaries, and ensure workers are equipped with
+          appropriate PPE. This tool was built to bring that analysis workflow
+          to a mobile device, allowing engineers to input system data on-site
+          and receive results quickly rather than relying on desktop software
+          back at the office.
+        </p>
+      </div>
+
+      <!-- Challenges -->
+      <div class="project-section">
+        <h2>Challenges &amp; Problems Solved</h2>
+        <ul>
+          <li>
+            Built a data-driven input system in Unity and C# capable of handling
+            the structured numerical inputs required for Arc Flash calculations,
+            with validation to prevent incorrect entries.
+          </li>
+          <li>
+            Designed a UI in Unity suited for professional use in the field,
+            balancing information density with readability on mobile screens.
+          </li>
+          <li>
+            Worked within a client-driven development environment at Icebreaker
+            Games, adapting to requirements and feedback from EPSCO's
+            engineering team throughout the project.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Links -->
+      <div id="links" class="project-section project-links">
+        <h2>Links</h2>
+        <a
+          href="https://github.com/IronThorn17"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-link-btn"
+        >
+          <i class="fab fa-github"></i>
+          GitHub Profile
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

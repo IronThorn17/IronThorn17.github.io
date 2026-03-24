@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,11 +6,11 @@
     <title>Gavin Woodruff - Software Engineer Portfolio</title>
     <meta
       name="description"
-      content="Portfolio of Gavin Woodruff - Software Engineer passionate about Unity, C#, and game development. Explore skills, projects, and contact information."
+      content="Portfolio of Gavin Woodruff - Software Engineer with experience in full-stack web development, machine learning pipelines, mobile apps, and desktop tools."
     />
     <meta
       name="keywords"
-      content="Gavin Woodruff, Software Engineer, Unity Developer, Game Development, C#, Python, Software Engineering Portfolio, St Cloud State University"
+      content="Gavin Woodruff, Software Engineer, React, Python, TypeScript, Unity, C#, Node.js, Docker, Software Engineering Portfolio, St Cloud State University"
     />
     <meta
       property="og:title"
@@ -60,7 +60,7 @@
     <header class="main-head">
       <div class="main-menu">
         <div class="logo">
-          <h2>GW</h2>
+          <a href="index.html"><h2>GW</h2></a>
         </div>
 
         <!-- Hamburger Icon (for mobile) -->
@@ -114,27 +114,26 @@
 
     <div id="intro" class="section intro">
       <h1>Gavin Woodruff</h1>
-      <h2>Software Engineering Intern</h2>
-      <a href="#contact" class="button">Contact Me</a>
+      <h2>Software Engineer</h2>
       <div class="grid"></div>
       <div class="social-media">
         <a
           href="https://www.instagram.com/gavinwoodruff18/"
-          target="blank"
+          target="_blank"
           rel="noopener noreferrer"
         >
           <i class="fab fa-instagram"></i>
         </a>
         <a
           href="https://github.com/IronThorn17"
-          target="blank"
+          target="_blank"
           rel="noopener noreferrer"
         >
           <i class="fab fa-github"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/gavinwoodruff18/"
-          target="blank"
+          target="_blank"
           rel="noopener noreferrer"
         >
           <i class="fab fa-linkedin"></i>
@@ -148,26 +147,30 @@
         <div class="line-indent"></div>
         <div class="paragraphs">
           <p>
-            I'm currently pursuing a Bachelor's degree in Software Engineering
-            at St. Cloud State University, with an expected graduation in Spring
-            2026. My journey into software development began with curiosity. I
-            started college without a specific goal or major, wanting to explore
-            different paths. Eventually, I decided to dive into programming and
-            game development, an old childhood desire.
+            I'm a software engineering graduate from St. Cloud State University
+            with hands-on experience building full-stack web applications,
+            machine learning pipelines, desktop tools, and mobile apps used in
+            real-world professional contexts. My projects have ranged from
+            automating asset detection in construction models to developing
+            safety analysis software for electrical engineers — work that pushed
+            me to pick up new technologies quickly and deliver across the whole
+            stack.
           </p>
           <p>
-            Teaching myself the basics of Unity and game development was a
-            turning point. I quickly realized that creating interactive
-            experiences was not just fascinating, but something I could see
-            myself doing long-term. This passion led me to choose Software
-            Engineering as my major, focusing on building engaging and dynamic
-            software solutions.
+            I'm drawn to problems where software can create real, tangible
+            impact, whether that's improving an engineer's daily workflow,
+            bringing a machine learning model into a usable product, or crafting
+            a mobile experience people actually enjoy. I'm comfortable moving
+            between frontend and backend, and I approach each project as an
+            opportunity to learn something new.
           </p>
           <p>
-            Outside of academics, I spend my free time developing video games in
-            Unity, constantly exploring new ways to push the boundaries of what
-            I can create. When I'm not coding, you'll find me playing guitar or
-            spending quality time with friends and family.
+            Outside of professional work, I've spent years building games in
+            Unity and modeling in Blender — a hobby that has sharpened my
+            instincts for user experience and interactive design. I've also been
+            playing guitar since I was 10, which has given me a deep
+            appreciation for the kind of patience and long-term commitment that
+            serious craft requires.
           </p>
         </div>
       </div>
@@ -175,121 +178,146 @@
 
     <div id="skills" class="section skills">
       <h2>My Skills</h2>
-      <div class="skills-wrapper">
-        <button
-          onclick="handleClick('previous')"
-          class="button button--previous"
-          type="button"
-        >
-          ➜
-        </button>
+      <div class="skills-categories">
+        <div>
+          <span class="skills-category-label">Languages</span>
+          <div class="skills-category-grid">
+            <div class="skills-item">
+              <div class="skills-content">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                />
+                <h3>Python</h3>
+              </div>
+            </div>
+            <div class="skills-item">
+              <div class="skills-content">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+                />
+                <h3>C#</h3>
+              </div>
+            </div>
+            <div class="skills-item">
+              <div class="skills-content">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+                />
+                <h3>C++</h3>
+              </div>
+            </div>
+            <div class="skills-item">
+              <div class="skills-content">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                />
+                <h3>HTML &amp; CSS</h3>
+              </div>
+            </div>
+            <div class="skills-item">
+              <div class="skills-content">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                />
+                <h3>TypeScript</h3>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <ul class="skills-list">
-          <li class="skills-item">
-            <div class="skills-content">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-plain.svg"
-              />
-              <h3>Unity</h3>
+        <div>
+          <span class="skills-category-label">Frameworks &amp; Libraries</span>
+          <div class="skills-category-grid">
+            <div class="skills-item">
+              <div class="skills-content">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                />
+                <h3>React</h3>
+              </div>
             </div>
-          </li>
-          <li class="skills-item">
-            <div class="skills-content">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
-              />
-              <h3>C#</h3>
+            <div class="skills-item">
+              <div class="skills-content">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                />
+                <h3>React Native</h3>
+              </div>
             </div>
-          </li>
-          <li class="skills-item">
-            <div class="skills-content">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-              />
-              <h3>GitHub</h3>
+            <div class="skills-item">
+              <div class="skills-content">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                />
+                <h3>Node.js</h3>
+              </div>
             </div>
-          </li>
-          <li class="skills-item">
-            <div class="skills-content">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-              />
-              <h3>Python</h3>
-            </div>
-          </li>
-          <li class="skills-item">
-            <div class="skills-content">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-              />
-              <h3>HTML & CSS</h3>
-            </div>
-          </li>
-          <li class="skills-item">
-            <div class="skills-content">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
-              />
-              <h3>C++</h3>
-            </div>
-          </li>
-          <li class="skills-item">
-            <div class="skills-content">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-              />
-              <h3>React Native</h3>
-            </div>
-          </li>
-          <li class="skills-item">
-            <div class="skills-content">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
-              />
-              <h3>MySQL</h3>
-            </div>
-          </li>
-          <li class="skills-item">
-            <div class="skills-content">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg"
-              />
-              <h3>Blender</h3>
-            </div>
-          </li>
-          <li class="skills-item">
-            <div class="skills-content">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg"
-              />
-              <h3>Photoshop</h3>
-            </div>
-          </li>
-        </ul>
+          </div>
+        </div>
 
-        <button
-          onclick="handleClick('next')"
-          class="button button--next"
-          type="button"
-        >
-          ➜
-        </button>
+        <div>
+          <span class="skills-category-label">Tools &amp; Platforms</span>
+          <div class="skills-category-grid">
+            <div class="skills-item">
+              <div class="skills-content">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+                />
+                <h3>Docker</h3>
+              </div>
+            </div>
+            <div class="skills-item">
+              <div class="skills-content">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                />
+                <h3>GitHub</h3>
+              </div>
+            </div>
+            <div class="skills-item">
+              <div class="skills-content">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+                />
+                <h3>PostgreSQL</h3>
+              </div>
+            </div>
+            <div class="skills-item">
+              <div class="skills-content">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+                />
+                <h3>MySQL</h3>
+              </div>
+            </div>
+            <div class="skills-item">
+              <div class="skills-content">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-plain.svg"
+                />
+                <h3>Unity</h3>
+              </div>
+            </div>
+            <div class="skills-item">
+              <div class="skills-content">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg"
+                />
+                <h3>Blender</h3>
+              </div>
+            </div>
+            <div class="skills-item">
+              <div class="skills-content">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg"
+                />
+                <h3>Photoshop</h3>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <script>
-      const list = document.querySelector(".skills-list");
-      const item = document.querySelector(".skills-item");
-      const itemWidth = item.offsetWidth;
-
-      function handleClick(direction) {
-        if (direction === "previous") {
-          list.scrollBy({ left: -itemWidth, behavior: "smooth" });
-        } else {
-          list.scrollBy({ left: itemWidth, behavior: "smooth" });
-        }
-      }
-    </script>
 
     <div id="projects" class="section projects">
       <h2>Projects</h2>
@@ -297,19 +325,55 @@
         <!-- Project Card -->
         <div class="project-card">
           <img
-            src="assets/images/IFCAssetDetection.png"
+            src="assets/images/IFCAssetDetection_Main.png"
             alt="Screenshot of Scope 360 IFC Asset Detection Project"
           />
+          <div class="card-footer">
+            <h3>Scope 360 IFC Asset Detection</h3>
+            <div class="card-tags">
+              <span class="card-tag">React</span>
+              <span class="card-tag">Python</span>
+              <span class="card-tag">YOLO</span>
+              <span class="card-tag">Docker</span>
+              <span class="card-tag">Node.js</span>
+              <span class="card-tag">PostgreSQL</span>
+            </div>
+          </div>
           <div class="card-overlay">
             <h3>Scope 360 IFC Asset Detection</h3>
             <p>
-              A senior project developped for Immersion Data Solutions to make
-              use of machine learning to automatically detect and label assets
-              in IFC files for use in the construction industry. This project
-              makes uses of Docker to ensure portabilitiy across different
-              systems.
+              A machine learning pipeline built for Immersion Data Solutions to
+              automatically detect and label assets in IFC construction models,
+              deployed in a fully Dockerized environment.
             </p>
             <a href="projects-scope360.html" class="details-button"
+              >Learn More</a
+            >
+          </div>
+        </div>
+        <!-- Project Card -->
+        <div class="project-card">
+          <img
+            src="assets/images/PantryPal_Details.png"
+            alt="Screenshot of PantryPal Project"
+          />
+          <div class="card-footer">
+            <h3>PantryPal</h3>
+            <div class="card-tags">
+              <span class="card-tag">React Native</span>
+              <span class="card-tag">TypeScript</span>
+              <span class="card-tag">Expo</span>
+            </div>
+          </div>
+          <div class="card-overlay">
+            <h3>PantryPal</h3>
+            <p>
+              A mobile app created for myself to store my recipes and generate
+              grocery lists automatically based on what I have in my pantry and
+              what recipes I want to make. Built with React Native and an
+              AsyncStorage database.
+            </p>
+            <a href="projects-pantrypal.html" class="details-button"
               >Learn More</a
             >
           </div>
@@ -320,64 +384,23 @@
             src="assets/images/IBGHomeScreen.jpg"
             alt="Screenshot of EPSCO AFS Project"
           />
-          <div class="card-overlay">
-            <h3>EPSCO AFS</h3>
-            <p>
-              Icebreaker Games was contracted to develop a software tool for
-              Electrical Engineers conducting Arc Flash studies. This tool
-              allows engineers to input and analyze data to quickly assess
-              factory safety standards and ensure compliance with safety
-              regulations.
-            </p>
-            <!-- <a href="project-details1.html" class="details-button">Learn More</a> -->
+          <div class="card-footer">
+            <h3>EPSCO Arc Flash Study Tool</h3>
+            <div class="card-tags">
+              <span class="card-tag">Unity</span>
+              <span class="card-tag">C#</span>
+            </div>
           </div>
-        </div>
-        <!-- Project Card -->
-        <div class="project-card">
-          <img
-            src="assets/images/BlueEggBakeryWebsiteMockup.jpg"
-            alt="Website Mockup Image"
-          />
           <div class="card-overlay">
-            <h3>Blue Egg Bakery Website</h3>
+            <h3>EPSCO Arc Flash Study Tool</h3>
             <p>
-              Created a website mockup for a local bakery to enhance their
-              online presence beyond Facebook. The design includes features for
-              marketing and an online order placement system to streamline
-              customer interactions.
+              A mobile tool developed at Icebreaker Games for electrical
+              engineers to conduct Arc Flash studies, input system data, and
+              assess factory safety compliance on-site.
             </p>
-            <!-- <a href="project-details1.html" class="details-button">Learn More</a> -->
-          </div>
-        </div>
-        <!-- Project Card -->
-        <div class="project-card">
-          <img
-            src="assets/images/Pong.png"
-            alt="Pong Multithreading Game Image"
-          />
-          <div class="card-overlay">
-            <h3>Pong Threading</h3>
-            <p>
-              Implemented Multithreading into the classic Pong game using C++
-              and OpenGL
-            </p>
-            <!-- <a href="project-details1.html" class="details-button">Learn More</a> -->
-          </div>
-        </div>
-        <!-- Project Card -->
-        <div class="project-card">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ctqoSkcWJbrSeL5tHvvab7iG4DS_sHdo3w&s"
-            alt="Bank Management Database System Mockup"
-          />
-          <div class="card-overlay">
-            <h3>Bank Management Database System Mockup</h3>
-            <p>
-              Using a SQL backend and a Visual Basic Forms frontend, my class
-              group created a mockup for a Bank Management Database System which
-              would manage employees, managers, payroll, and timecards.
-            </p>
-            <!-- <a href="project-details1.html" class="details-button">Learn More</a> -->
+            <a href="projects-epscoafs.html" class="details-button"
+              >Learn More</a
+            >
           </div>
         </div>
       </div>
@@ -385,30 +408,53 @@
 
     <div id="experience" class="section experience">
       <h2>Experience</h2>
-      <div class="experience-grid">
-        <div class="exp glass">
-          <img src="assets/images/IBG_Logo2.png" alt="Icebreaker Games Logo" />
-          <h3>Icebreaker Games</h3>
-          <h4>St Cloud, Minnesota</h4>
-          <p>2024</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <img
+              src="assets/images/IBG_Logo2.png"
+              alt="Icebreaker Games Logo"
+              class="timeline-logo"
+            />
+            <div class="timeline-text">
+              <h3>Icebreaker Games</h3>
+              <h4>Software Engineering Intern</h4>
+              <p>St Cloud, Minnesota &middot; 2024</p>
+            </div>
+          </div>
         </div>
-        <div class="exp glass">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ctqoSkcWJbrSeL5tHvvab7iG4DS_sHdo3w&s"
-            alt="St Cloud State University"
-          />
-          <h3>St Cloud State University</h3>
-          <h4>St Cloud, Minnesota</h4>
-          <p>2020</p>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ctqoSkcWJbrSeL5tHvvab7iG4DS_sHdo3w&s"
+              alt="St Cloud State University"
+              class="timeline-logo"
+            />
+            <div class="timeline-text">
+              <h3>St Cloud State University</h3>
+              <h4>B.S. Software Engineering</h4>
+              <p>St Cloud, Minnesota &middot; 2020 &ndash; 2026</p>
+            </div>
+          </div>
         </div>
-        <div class="exp glass">
-          <img
-            src="https://www.smsu.edu/resources/webspaces/academics/onlinelearning/partnerships/arcc-logo.jpg"
-            alt="Anoka Ramsey Community College"
-          />
-          <h3>Anoka Ramsey Community College</h3>
-          <h4>Coon Rapids, Minnesota</h4>
-          <p>2018</p>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <img
+              src="https://www.smsu.edu/resources/webspaces/academics/onlinelearning/partnerships/arcc-logo.jpg"
+              alt="Anoka Ramsey Community College"
+              class="timeline-logo"
+            />
+            <div class="timeline-text">
+              <h3>Anoka Ramsey Community College</h3>
+              <h4>General Education</h4>
+              <p>Coon Rapids, Minnesota &middot; 2018 &ndash; 2020</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

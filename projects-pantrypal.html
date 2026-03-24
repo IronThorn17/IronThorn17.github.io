@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scope 360 IFC Asset Detection – Gavin Woodruff</title>
+    <title>PantryPal – Gavin Woodruff</title>
 
     <!-- Shared styles (from your site) -->
     <link rel="stylesheet" href="styles.css" />
@@ -61,23 +61,17 @@
     <div class="section project-details">
       <!-- HERO: Title + Badge + Subtitle + Tech Stack -->
       <div class="project-header">
-        <span class="project-type-badge"
-          >Industry-Sponsored Senior Project</span
-        >
-        <h1 class="project-title">Scope 360 IFC Asset Detection</h1>
+        <span class="project-type-badge">Personal Project</span>
+        <h1 class="project-title">PantryPal</h1>
         <h2 class="project-subtitle">
-          A machine learning pipeline and UI system for automatically detecting
-          and labeling assets in IFC construction files, developed for Immersion
-          Data Solutions.
+          A cross-platform mobile app for storing recipes and automatically
+          generating grocery lists based on what you want to cook.
         </h2>
         <div class="tech-stack">
-          <span class="tech-tag">React</span>
-          <span class="tech-tag">Node.js</span>
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">YOLO</span>
-          <span class="tech-tag">Docker</span>
-          <span class="tech-tag">PostgreSQL</span>
-          <span class="tech-tag">PostGIS</span>
+          <span class="tech-tag">React Native</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Expo</span>
+          <span class="tech-tag">AsyncStorage</span>
         </div>
       </div>
 
@@ -86,18 +80,14 @@
         <div class="project-info-card">
           <h3>My Role</h3>
           <p>
-            Developed major components of the UI and machine learning pipeline.
-            Set up the project architecture using Docker, React, Node.js, and a
-            PostGIS-enabled database. Worked closely with teammates to integrate
-            YOLO-based object detection into the workflow.
+            Sole developer. Designed and built the entire application from
+            scratch — including the UI, navigation, data model, local
+            persistence layer, and grocery list generation logic.
           </p>
         </div>
         <div class="project-info-card">
           <h3>Project Type</h3>
-          <p>
-            Team-based, industry-sponsored senior capstone project in
-            collaboration with Immersion Data Solutions.
-          </p>
+          <p>Personal project, built for everyday use.</p>
         </div>
       </div>
 
@@ -106,19 +96,29 @@
         <h2>Screenshots</h2>
 
         <!-- CAROUSEL WRAPPER -->
-        <div class="carousel">
+        <div class="carousel carousel-portrait">
           <button class="carousel-btn prev-btn">&#10094;</button>
 
           <div class="carousel-track">
             <img
-              src="assets/images/IFCAssetDetection_Main.png"
+              src="assets/images/PantryPal_Details.png"
               class="carousel-image"
-              alt="IFC Asset Detection UI"
+              alt="PantryPal Recipe Details"
             />
             <img
-              src="assets/images/IFCAssetDetection_Upload.png"
+              src="assets/images/PantryPal_List.png"
               class="carousel-image"
-              alt="IFC Asset Detection UI"
+              alt="PantryPal Recipe List"
+            />
+            <img
+              src="assets/images/PantryPal_Ingredient.png"
+              class="carousel-image"
+              alt="PantryPal Ingredient Details"
+            />
+            <img
+              src="assets/images/PantryPal_GroceryList.png"
+              class="carousel-image"
+              alt="PantryPal Grocery List"
             />
           </div>
 
@@ -130,12 +130,15 @@
       <div id="overview" class="project-section">
         <h2>Overview</h2>
         <p>
-          This project aimed to automate the identification of construction
-          assets inside IFC models by applying machine learning to classify and
-          label objects. Our team was tasked with building a full pipeline:
-          frontend interface, backend processing logic, a database for storing
-          labeled assets, and a YOLO-based detection model wrapped in a
-          Dockerized environment to ensure portability across systems.
+          PantryPal is a personal utility app I built to solve a problem I ran
+          into constantly — keeping track of recipes and figuring out what to
+          buy at the grocery store. The app lets you create and store detailed
+          recipes with ingredients, serving sizes, and notes. When you decide
+          what you want to make for the week, it aggregates the ingredient lists
+          across your selected recipes and generates a consolidated grocery list
+          automatically. All data is stored locally on-device using
+          AsyncStorage, so the app works fully offline with no account or
+          backend required.
         </p>
       </div>
 
@@ -144,23 +147,25 @@
         <h2>Challenges &amp; Problems Solved</h2>
         <ul>
           <li>
-            Designed the entire project architecture using tools that were
-            unfamiliar at the start, including Docker, PostGIS, and
-            YOLO—requiring rapid self-learning and technical adaptation.
+            Built the app entirely in TypeScript and React Native, both of which
+            were new to me at the start of the project — required learning the
+            type system, component model, and mobile-specific APIs
+            simultaneously.
           </li>
           <li>
-            Implemented the frontend UI in React to upload, view, and manage
-            parsed IFC data, enabling engineers to easily interact with model
-            information.
+            Designed a data model flexible enough to support variable ingredient
+            counts, optional fields, and future extensibility, stored entirely
+            in AsyncStorage without a relational database.
           </li>
           <li>
-            Integrated a YOLO machine learning workflow using Python, including
-            model loading, inference execution, and data formatting for the
-            backend.
+            Implemented a grocery list generator that merges ingredients across
+            multiple selected recipes, consolidating duplicate entries, merging
+            units, and organizing the output for practical use in a store.
           </li>
           <li>
-            Created a Docker-based environment to unify the frontend, backend,
-            ML pipeline, and database into a consistent deployment system.
+            Built a clean, touch-friendly UI optimized for quick access on
+            mobile, including smooth navigation between the recipe list, detail
+            views, and grocery list screen.
           </li>
         </ul>
       </div>
